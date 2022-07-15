@@ -8,8 +8,8 @@ Rails.application.routes.draw do
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'
 
-  get '/notes', to: 'notes#get_all_notes'
-  get '/users/:user_id/notes', to: 'notes#get_user_notes' 
+  get '/stats', to: 'stats#get_all_stats'
+  get '/users/:user_id/stats', to: 'stats#get_user_stats' 
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
