@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  # include ActiveModel::SecurePassword
+
   has_many :characters, dependent: :destroy
   
   has_secure_password

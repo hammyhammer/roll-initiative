@@ -8,6 +8,12 @@ class CharactersController < ApplicationController
     render json: @characters
   end
 
+  # GET characters from a specific user
+  def get_user_characters
+    @user = User.find(params[:user_id])
+    render json: @user.posts
+  end
+
   # GET /characters/1
   def show
     render json: @character
@@ -16,6 +22,8 @@ class CharactersController < ApplicationController
   # POST /characters
   def create
     @character = Character.new(character_params)
+    ##
+    @character.user = @current_user
 
     if @character.save
       render json: @character, status: :created, location: @character

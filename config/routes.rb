@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   resources :characters do
     resources :stats
   end
+  resources :users do
+    recources :characters
+  end
+
+  get "/users/:user_id/characters", to: "characters#get_user_characters"
 
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'
