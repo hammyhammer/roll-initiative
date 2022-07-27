@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :stats
   end
   resources :users do
-    recources :characters
+    resources :characters
   end
 
   get "/users/:user_id/characters", to: "characters#get_user_characters"
