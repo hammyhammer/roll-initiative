@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_15_191109) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_28_183352) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,19 +23,6 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_15_191109) do
     t.index ["user_id"], name: "index_characters_on_user_id"
   end
 
-  create_table "stats", force: :cascade do |t|
-    t.integer "hp"
-    t.integer "ac"
-    t.string "attack_mode"
-    t.string "damage_mod"
-    t.integer "movement"
-    t.string "spell_slots"
-    t.bigint "character_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["character_id"], name: "index_stats_on_character_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email"
     t.string "password_digest"
@@ -44,5 +31,4 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_15_191109) do
   end
 
   add_foreign_key "characters", "users"
-  add_foreign_key "stats", "characters"
 end
