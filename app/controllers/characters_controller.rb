@@ -8,20 +8,50 @@ class CharactersController < ApplicationController
     render json: @characters
   end
 
+  def get_user_characters
+    @user = User.find(params[:id])
+    render json: @user.characters
+  end
+
   # GET /characters/1
   def show
     render json: @character
   end
 
-  # POST /characters
-  def create
-    @character = Character.new(character_params)
+  # def create_user_characters
+  #   @character = Character.new(character_params)
+  #   # New below
+  #   # @character.user = @current_user
 
-    if @character.save
-      render json: @character, status: :created, location: @character
-    else
-      render json: @character.errors, status: :unprocessable_entity
-    end
+  #   if @character.save
+  #     render json: @character, status: :created, location: @character
+
+  #     # render json: @character, status: :created
+  #   else
+  #     render json: @character.errors, status: :unprocessable_entity
+  #   end
+  # end
+  # POST /characters
+
+  def create
+    @user = User.find(params[:id])
+    render json: @user
+
+    # @character = Character.new(character_params)
+    # # New below
+    # # @character = Character.new(params)
+    # @user = User.find(params[:id])
+    # @character.user = @user
+    
+    # # @character = @user.find(:id)
+    # # @character.user = @current_user
+    # if @character.save
+    #   render json: @character, status: :created, location: @character
+
+    #   # render json: @character, status: :created
+    # else
+  #     render json: @character.errors, status: :unprocessable_entity
+  # end
   end
 
   # PATCH/PUT /characters/1
