@@ -19,7 +19,7 @@ export default function Login(props) {
     }
 
     const res = await loginUser(user)
-    // props.setCurrentUser(res)
+    props.setCurrentUser(res)
     navigate('/board')
   }
 
