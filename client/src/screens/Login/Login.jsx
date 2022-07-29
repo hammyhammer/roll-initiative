@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { loginUser } from '../../services/users';
-import logincss from './Login.module.css';
 import { useNavigate } from 'react-router-dom';
+import logincss from './Login.module.css';
+
 
 export default function Login(props) {
 
@@ -14,7 +15,7 @@ export default function Login(props) {
     event.preventDefault();
     const user = {
       email,
-      password
+      password,
     }
 
     const response = await loginUser(user)
@@ -24,11 +25,18 @@ export default function Login(props) {
 
 
   return (
-    <body className={logincss.whole}>
+    <div className={logincss.whole}>
+      <header>
+        Roll Initative
+      </header>
       <div>
-        Login
+        <form onSubmit={handleSubmit}>
+          <input type="text" value={email} placeholder='email' onChange={(event) => setEmail(event.target.value)} />
+          <input type="text" value={password} placeholder='password' onChange={(event) => setPassword(event.target.value)} />
+          <button>Login</button>
+        </form>
       </div>
-    </body>
+    </div>
 
   )
 }
