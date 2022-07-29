@@ -7,6 +7,9 @@ Rails.application.routes.draw do
 
   # get "/users/:user_id/characters", to: "characters#get_user_characters"
   get '/users', to: 'users#index'
+  get '/users/:id', to: 'users#show'
+  post '/users', to: 'users#create'
+
   post '/auth/login', to: 'authentications#login'
   get '/auth/verify', to: 'authentications#verify'
 
