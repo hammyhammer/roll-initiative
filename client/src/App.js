@@ -18,6 +18,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Login setcurrentUser={setCurrentUser} />} />
+        <Route path='/board' element={"Board page"} />
       </Routes>
     </div>
   );
