@@ -1,4 +1,5 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
 import { getAllCharacters } from '../../services/characters'
 
 export default function CharacterContainer() {
@@ -14,6 +15,10 @@ export default function CharacterContainer() {
   }, [toggle])
 
   return (
-    <div>CharacterContainer</div>
+    <div>
+      <Routes>
+        <Route path="/" element={"test"} />
+      </Routes>
+    </div>
   )
 }

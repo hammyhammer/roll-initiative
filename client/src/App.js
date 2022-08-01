@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import { verify } from './services/users'
 import Login from './screens/Login/Login';
 import Home from './screens/Home/Home';
+import CharacterContainer from './containers/CharacterContainer/CharacterContainer';
 function App() {
   const [currentUser, setCurrentUser] = useState(null)
 
@@ -19,7 +20,8 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Login setCurrentUser={setCurrentUser} />} />
-        <Route path='/board' element={<Home currentUser={currentUser} />} />
+        <Route path="/board/*" element={<CharacterContainer currentUser={currentUser} />} />
+        {/* <Route path='/board' element={<Home currentUser={currentUser} />} /> */}
       </Routes>
     </div>
   );
