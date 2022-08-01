@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Login setCurrentUser={setCurrentUser} />} />
-        <Route path='/board' element={<Home setCurrentUser={setCurrentUser} />} />
+        <Route path='/board' element={<Home currentUser={currentUser} />} />
       </Routes>
     </div>
   );
