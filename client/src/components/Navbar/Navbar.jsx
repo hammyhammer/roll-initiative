@@ -8,9 +8,9 @@ export default function Navbar(props) {
   }
 
   return (
-    <div>Navbar
+    <div>
+      <h3>Roll Initiative</h3>
       <Link to='/' onClick={logout}>logout</Link>
-
     </div>
   )
 }
