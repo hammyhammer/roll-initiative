@@ -3,12 +3,12 @@ import Layout from '../../components/Layout/Layout'
 
 export default function Home(props) {
   console.log(props.currentUser)
-  console.log(props.characters.name)
+  console.log(props.characters)
   return (
     <div>
       <Layout>
         <header>Main Page</header>
-        <div>
+        {/* <div>
           {props.characters.map(character => {
             <div key={character.id}>
               {
@@ -18,7 +18,7 @@ export default function Home(props) {
               }
             </div>
           })}
-        </div>
+        </div> */}
       </Layout >
     </div >
   )

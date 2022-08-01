@@ -20,8 +20,9 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Login setCurrentUser={setCurrentUser} />} />
+        <Route path="/register" element={"register page"} />
+        <Route path='/home' element={<Home currentUser={currentUser} />} />
         <Route path="/combat/*" element={<CharacterContainer currentUser={currentUser} />} />
-        {/* <Route path='/board' element={<Home currentUser={currentUser} />} /> */}
       </Routes>
     </div>
   );
