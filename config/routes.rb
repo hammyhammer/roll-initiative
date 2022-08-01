@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   post '/users/:id/characters/create', to: 'characters#create_user_character'
   put '/users/:id/characters/:id', to: 'characters#update'
   delete '/users/:id/characters/:id', to: 'characters#destroy'
+
+  get '/characters', to: 'characters#index'
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
