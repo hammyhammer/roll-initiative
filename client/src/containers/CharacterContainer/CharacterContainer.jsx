@@ -18,7 +18,7 @@ export default function CharacterContainer(props) {
   return (
     <div>
       <Routes>
-        <Route path="/" element={<Home characters={characters} currentUser={props.currentUser} />} />
+        <Route path="/combat" element={<Home characters={characters} currentUser={props.currentUser} />} />
       </Routes>
     </div>
   )

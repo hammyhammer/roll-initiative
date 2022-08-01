@@ -20,7 +20,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Login setCurrentUser={setCurrentUser} />} />
-        <Route path="/board/*" element={<CharacterContainer currentUser={currentUser} />} />
+        <Route path="/combat/*" element={<CharacterContainer currentUser={currentUser} />} />
         {/* <Route path='/board' element={<Home currentUser={currentUser} />} /> */}
       </Routes>
     </div>
