@@ -1,16 +1,11 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
-export default function Home(props) {
-
-  const logout = () => {
-    localStorage.removeItem('authToken')
-    props.setCurrentUser(null)
-  }
+import Navbar from '../../components/Navbar/Navbar'
+export default function Home() {
 
   return (
     <div>
+      <Navbar />
       <header>Main Page</header>
-      <Link to='/' onClick={logout}>logout</Link>
     </div>
   )
 }
