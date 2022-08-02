@@ -14,6 +14,13 @@ export default function Home(props) {
           characters.map(character => (
             <div key={character.id}>
               <h2>{character.name}</h2>
+              <p>{`Current HP: ${character.hp}`}</p>
+              <p>{`Armor Class: ${character.ac}`}</p>
+              <p>{`Attack Modifier: ${character.atk_mod}`}</p>
+              <p>{`Damage Modifier: ${character.dmg_mod}`}</p>
+              <p>{`Movement: ${character.movement}`}</p>
+
+
             </div>
           ))
         };
