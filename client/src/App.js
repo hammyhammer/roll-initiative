@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <Routes>
         <Route path="/" element={<Login setCurrentUser={setCurrentUser} />} />
-        <Route path="/register" element={<Register />} />
+        <Route path="/register" element={<Register setCurrentUser={setCurrentUser} />} />
         <Route path='/home' element={<Home currentUser={currentUser} />} />
         <Route path="/combat/*" element={<CharacterContainer currentUser={currentUser} />} />
       </Routes>
