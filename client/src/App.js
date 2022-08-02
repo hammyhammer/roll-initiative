@@ -23,7 +23,7 @@ function App() {
         <Route path="/" element={<Login setCurrentUser={setCurrentUser} />} />
         <Route path="/register" element={<Register setCurrentUser={setCurrentUser} />} />
         <Route path='/home' element={<Home currentUser={currentUser} />} />
-        <Route path="/combat/*" element={<CharacterContainer currentUser={currentUser} />} />
+        <Route path="/characters/*" element={<CharacterContainer currentUser={currentUser} />} />
       </Routes>
     </div>
   );
