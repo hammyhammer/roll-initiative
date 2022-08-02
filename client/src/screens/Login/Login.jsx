@@ -23,6 +23,10 @@ export default function Login(props) {
     navigate('/combat')
   }
 
+  const registerPath = async (event) => {
+    navigate('/register')
+  }
+
 
   return (
     <div className={logincss.whole}>
@@ -34,7 +38,12 @@ export default function Login(props) {
           <input type="text" value={email} placeholder='email' onChange={(event) => setEmail(event.target.value)} />
           <input type="text" value={password} placeholder='password' onChange={(event) => setPassword(event.target.value)} />
           <button>Login</button>
+
+
         </form>
+      </div>
+      <div>
+        <button onClick={registerPath}>Register</button>
       </div>
     </div>
 
