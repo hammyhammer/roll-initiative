@@ -1,12 +1,12 @@
 import { useState } from 'react'
-// import { Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { registerUser } from '../../services/users'
 
 export default function Register(props) {
   const [email, setEmail] = useState("")
   const [password, setPassword] = useState("")
-
-  const handleSubmit = (event) => {
+  const navigate = useNavigate()
+  const handleSubmit = async (event) => {
     event.preventDefault()
     const user = {
       email,
@@ -14,7 +14,7 @@ export default function Register(props) {
     }
     const response = await registerUser(user);
     props.setCurrentUser(response)
-    // Navigate('/combat')
+    navigate('/home')
   }
   return (
     <div>

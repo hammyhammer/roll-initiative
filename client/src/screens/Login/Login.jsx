@@ -20,7 +20,7 @@ export default function Login(props) {
 
     const res = await loginUser(user)
     props.setCurrentUser(res)
-    navigate('/combat')
+    navigate('/home')
   }
 
   const registerPath = async (event) => {
