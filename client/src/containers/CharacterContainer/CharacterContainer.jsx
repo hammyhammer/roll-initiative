@@ -18,7 +18,8 @@ export default function CharacterContainer(props) {
   return (
     <div>
       <Routes>
-        <Route path="/characters" element={<Home characters={characters} currentUser={props.currentUser} />} />
+        <Route path="/" element={<Home characters={characters} currentUser={props.currentUser} />} />
+        <Route path="/characters/creation" element={"dead space"} />
       </Routes>
     </div>
   )

@@ -14,7 +14,7 @@ export default function Register(props) {
     }
     const response = await registerUser(user);
     props.setCurrentUser(response)
-    navigate('/home')
+    navigate('/characters')
   }
   return (
     <div>
