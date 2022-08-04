@@ -17,8 +17,30 @@ export default function PostCharacter() {
     setToggle(prevToggle => !prevToggle);
   };
 
+  const handleSubmit = (event) => {
+    const character = {
+      name,
+      hp,
+      ac,
+      atkMod,
+      dmgMod,
+      movement
+    }
+    handleCharacterCreate(character)
+  }
+
 
   return (
-    <div>PostCharacter</div>
+    <div>
+      <form>
+        <input type="text" value={name} placeholder="Name of Character" onChange={(event) => setName(event.target.value)} />
+        <input type="text" value={hp} placeholder="HP" onChange={(event) => setHp(event.target.value)} />
+        <input type="text" value={ac} placeholder="AC" onChange={(event) => setAc(event.target.value)} />
+        <input type="text" value={atkMod} placeholder="Attack Mod" onChange={(event) => setAtkMod(event.target.value)} />
+        <input type="text" value={dmgMod} placeholder="Damage Mod" onChange={(event) => setDmgMod(event.target.value)} />
+        <input type="text" value={movement} placeholder="Movement" onChange={(event) => setMovement(event.target.value)} />
+
+      </form>
+    </div>
   )
 }
