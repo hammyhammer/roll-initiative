@@ -32,6 +32,7 @@ export default function PostCharacter() {
 
   return (
     <div>
+      test
       <form onSubmit={handleSubmit}>
         <input type="text" value={name} placeholder="Name of Character" onChange={(event) => setName(event.target.value)} />
         <input type="text" value={hp} placeholder="HP" onChange={(event) => setHp(event.target.value)} />

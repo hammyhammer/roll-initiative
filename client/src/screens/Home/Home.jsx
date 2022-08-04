@@ -1,6 +1,7 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout'
-import PostCharacter from '../PostCharacter/PostCharacter'
+// import PostCharacter from '../PostCharacter/PostCharacter'
 export default function Home(props) {
   // console.log(props.currentUser)
   // console.log(props.characters)
@@ -24,8 +25,8 @@ export default function Home(props) {
             </div>
           ))
         }
-        <PostCharacter />
-
+        {/* <PostCharacter /> */}
+        <Link to="/characters/create">Add a new Character</Link>
       </Layout >
     </div >
   )

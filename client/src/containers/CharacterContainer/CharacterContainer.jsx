@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import Home from '../../screens/Home/Home';
+import PostCharacter from '../../screens/PostCharacter/PostCharacter';
 import { getAllCharacters } from '../../services/characters'
 
 export default function CharacterContainer(props) {
@@ -19,7 +20,7 @@ export default function CharacterContainer(props) {
     <div>
       <Routes>
         <Route path="/" element={<Home characters={characters} currentUser={props.currentUser} />} />
-        <Route path="/characters/creation" element={"dead space"} />
+        <Route path="/create" element={<PostCharacter characters={characters} currentUser={props.currentUser} />} />
       </Routes>
     </div>
   )
