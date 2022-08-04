@@ -32,14 +32,14 @@ export default function PostCharacter() {
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleSubmit}>
         <input type="text" value={name} placeholder="Name of Character" onChange={(event) => setName(event.target.value)} />
         <input type="text" value={hp} placeholder="HP" onChange={(event) => setHp(event.target.value)} />
         <input type="text" value={ac} placeholder="AC" onChange={(event) => setAc(event.target.value)} />
         <input type="text" value={atkMod} placeholder="Attack Mod" onChange={(event) => setAtkMod(event.target.value)} />
         <input type="text" value={dmgMod} placeholder="Damage Mod" onChange={(event) => setDmgMod(event.target.value)} />
         <input type="text" value={movement} placeholder="Movement" onChange={(event) => setMovement(event.target.value)} />
-
+        <button>save</button>
       </form>
     </div>
   )
