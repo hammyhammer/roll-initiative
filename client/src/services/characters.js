@@ -10,3 +10,8 @@ export const getOneCharacters = async (character_id) => {
   return res.data
 }
 
+export const createCharacter = async (characterData) => {
+  const res = await api.post('/characters/create', { character: characterData })
+  return res.data
+}
+
