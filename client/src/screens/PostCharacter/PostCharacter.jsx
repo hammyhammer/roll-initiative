@@ -20,6 +20,7 @@ export default function PostCharacter() {
   };
 
   const handleSubmit = (event) => {
+    event.preventDefault()
     const character = {
       name,
       hp,
@@ -29,7 +30,7 @@ export default function PostCharacter() {
       movement
     }
     handleCharacterCreate(character)
-    navigate('/characters')
+    // navigate('/characters')
   }
 
 
