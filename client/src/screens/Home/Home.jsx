@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout/Layout'
+import PostCharacter from '../PostCharacter/PostCharacter'
 export default function Home(props) {
   // console.log(props.currentUser)
   // console.log(props.characters)
@@ -19,7 +20,7 @@ export default function Home(props) {
               <p>{`Attack Modifier: ${character.atk_mod}`}</p>
               <p>{`Damage Modifier: ${character.dmg_mod}`}</p>
               <p>{`Movement: ${character.movement}`}</p>
-
+              <PostCharacter />
 
             </div>
           ))
