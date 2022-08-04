@@ -1,8 +1,10 @@
 import { useState } from 'react'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { createCharacter } from '../../services/characters'
 
 export default function PostCharacter() {
+  const navigate = useNavigate()
+
   const [name, setName] = useState("")
   const [hp, setHp] = useState(0)
   const [ac, setAc] = useState(0)
@@ -27,6 +29,7 @@ export default function PostCharacter() {
       movement
     }
     handleCharacterCreate(character)
+    navigate('/characters')
   }
 
 
