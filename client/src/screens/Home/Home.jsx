@@ -20,11 +20,12 @@ export default function Home(props) {
               <p>{`Attack Modifier: ${character.atk_mod}`}</p>
               <p>{`Damage Modifier: ${character.dmg_mod}`}</p>
               <p>{`Movement: ${character.movement}`}</p>
-              <PostCharacter />
 
             </div>
           ))
-        };
+        }
+        <PostCharacter />
+
       </Layout >
     </div >
   )
