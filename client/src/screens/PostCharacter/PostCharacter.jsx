@@ -1,9 +1,10 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
-import { createCharacter } from '../../services/characters'
+import { createCharacter, getAllCharacters } from '../../services/characters'
 
-export default function PostCharacter() {
+export default function PostCharacter(props) {
   const navigate = useNavigate()
+  const [characters, setCharacters] = useState([])
 
   const [name, setName] = useState("")
   const [hp, setHp] = useState(0)
@@ -13,6 +14,19 @@ export default function PostCharacter() {
   const [movement, setMovement] = useState("")
   const [toggle, setToggle] = useState(false)
   const { id } = useParams();
+  // console.log(props.currentUser)
+
+  // useEffect(() => {
+  //   const specificUser = user.find(user => {
+  //     return user.id === Number(id)
+  //   })
+  //   const fetchCharacters = async () => {
+  //     const characters = await getAllCharacters(id)
+  //     setCharacters(characters)
+  //   }
+  //   fetchCharacters()
+  //   props.currentUser(specificUser)
+  // }, [id, characters, toggle])
 
   const handleCharacterCreate = async (formData) => {
     await createCharacter(id, formData);
