@@ -5,6 +5,11 @@ export const getAllCharacters = async () => {
   return res.data
 }
 
+export const getUserCharacters = async (user_id) => {
+  const res = await api.get(`/users/${user_id}/characters`)
+  return res.data
+}
+
 export const getOneCharacters = async (character_id) => {
   const res = await api.get(`/characters/${character_id}`)
   return res.data

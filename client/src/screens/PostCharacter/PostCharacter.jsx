@@ -14,7 +14,7 @@ export default function PostCharacter(props) {
   const [movement, setMovement] = useState("")
   const [toggle, setToggle] = useState(false)
   const { id } = useParams();
-  // console.log(props.currentUser)
+  console.log(props.currentUser)
 
   // useEffect(() => {
   //   const specificUser = user.find(user => {
