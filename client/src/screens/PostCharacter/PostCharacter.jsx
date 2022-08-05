@@ -6,7 +6,6 @@ import { getUserCharacters } from '../../services/characters'
 export default function PostCharacter(props) {
   const navigate = useNavigate()
   const [characters, setCharacters] = useState([])
-
   const [name, setName] = useState("")
   const [hp, setHp] = useState(0)
   const [ac, setAc] = useState(0)
@@ -16,7 +15,10 @@ export default function PostCharacter(props) {
   const [toggle, setToggle] = useState(false)
   const { id } = useParams();
 
+  console.log(props.currentUser.id)
+
   useEffect(() => {
+    const specificUser = Number(props.currentUser.id)
     const fetchCharacters = async () => {
       const characters = await getUserCharacters(id)
       setCharacters(characters)
