@@ -16,6 +16,9 @@ Rails.application.routes.draw do
 
   get '/users/:id/characters', to: 'characters#get_user_characters'
   get 'users/:id/characters/:id', to: 'characters#show'
+
+  # post '/characters/create', to: 'characters#create'
+
   post '/users/:id/characters/create', to: 'characters#create_user_character'
   put '/users/:id/characters/:id', to: 'characters#update'
   delete '/users/:id/characters/:id', to: 'characters#destroy'

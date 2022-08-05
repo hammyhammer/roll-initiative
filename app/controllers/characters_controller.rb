@@ -18,6 +18,18 @@ class CharactersController < ApplicationController
     render json: @character
   end
 
+  #create /characters/create
+  # def create
+  #   @character = Character.new(character_params)
+  #   @character.user = @current_user
+
+  #   if @character.save
+  #     render json: @character, status: :created
+  #   else
+  #     render json: @character.errors, status: :unprocessable_entity
+  #   end
+  # end
+
   # POST /characters
   def create_user_character
     @character = Character.new(character_params)
