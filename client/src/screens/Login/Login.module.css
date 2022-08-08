@@ -2,3 +2,10 @@
   height: 100%;
   border: 1px red solid;
 }
+
+.form {
+  display: flex;
+  align-content: center;
+  align-items: column;
+  margin: 50px;
+}
