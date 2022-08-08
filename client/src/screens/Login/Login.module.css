@@ -10,7 +10,12 @@
   font-size: 5vw;
 }
 
-.form {
+.inputs {
   display: flex;
   flex-direction: column;
+}
+
+.inputs {
+
+  width: 10%
 }
