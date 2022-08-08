@@ -1,11 +1,16 @@
 .whole {
   height: 100%;
   border: 1px red solid;
+  text-align: center;
+}
+
+.banner {
+  display: flex;
+  flex-direction: flex-start;
+  font-size: 5vw;
 }
 
 .form {
   display: flex;
-  align-content: center;
-  align-items: column;
-  margin: 50px;
+  flex-direction: column;
 }
