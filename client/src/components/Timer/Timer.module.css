@@ -1,5 +1,9 @@
 .timer {
   display: flex;
-  justify-content: flex-end;
+  justify-content: center;
+  align-items: center;
   border: 1px red solid;
+  margin-left: 80%;
 }
+
+.clock {}

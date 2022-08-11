@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import timercss from './Timer.module.css'
 export default function Timer() {
-  const [timer, setTimer] = useState(60)
+  const [timer, setTimer] = useState(0)
 
   useEffect(() => {
     if (timer > 0) {
@@ -9,19 +9,19 @@ export default function Timer() {
     }
   }, [timer])
 
-  // const handleSubmit = (event) => {
-  //   event.preventDefault()
-  //   const createTime = {
-  //     timer
-  //   }
-  // }
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    const createTime = {
+      timer
+    }
+  }
 
   return (
     <div className={timercss.timer}>
-      {timer}
-      {/* <form onSubmit={handleSubmit}>
+      <h5 className={timercss.clock}>{timer}</h5>
+      <form onSubmit={handleSubmit}>
         <input type="number" value={timer} placeholder="Enter time" onChange={(event) => setTimer(event.target.value)} />
-      </form> */}
+      </form>
     </div>
   )
 }
