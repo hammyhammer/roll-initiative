@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
-
-export default function Timer({ max }) {
-  const [timer, setTimer] = useState(max)
+import timercss from './Timer.module.css'
+export default function Timer() {
+  const [timer, setTimer] = useState(60)
 
   useEffect(() => {
     if (timer > 0) {
@@ -17,7 +17,7 @@ export default function Timer({ max }) {
   // }
 
   return (
-    <div>
+    <div className={timercss.timer}>
       {timer}
       {/* <form onSubmit={handleSubmit}>
         <input type="number" value={timer} placeholder="Enter time" onChange={(event) => setTimer(event.target.value)} />

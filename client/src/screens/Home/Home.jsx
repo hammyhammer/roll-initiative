@@ -13,7 +13,7 @@ export default function Home(props) {
     <div>
       <Layout>
         <h3>Main Page</h3>
-        <Timer max={60} />
+        <Timer />
         {
           characters.map(character => (
             <div key={character.id}>
