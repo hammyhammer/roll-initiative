@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 
 export default function Timer() {
-  const [timer, setTime] = useState(0)
+  const [timer, setTimer] = useState(0)
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -12,8 +12,8 @@ export default function Timer() {
 
   return (
     <div>
-      <form action="">
-
+      <form onSubmit={handleSubmit}>
+        <input type="number" value={timer} placeholder="Enter time" onChange={(event) => setTimer(event.target.value)} />
       </form>
     </div>
   )
