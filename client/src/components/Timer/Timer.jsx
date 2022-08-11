@@ -1,20 +1,27 @@
 import { useState, useEffect } from 'react'
 
 export default function Timer() {
-  const [timer, setTimer] = useState(0)
+  const [timer, setTimer] = useState(10)
 
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    const createTime = {
-      timer
+  useEffect(() => {
+    if (timer > 0) {
+      setTimeout(() => setTimer(timer - 1), 1000)
     }
-  }
+  }, [])
+
+  // const handleSubmit = (event) => {
+  //   event.preventDefault()
+  //   const createTime = {
+  //     timer
+  //   }
+  // }
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      {timer}
+      {/* <form onSubmit={handleSubmit}>
         <input type="number" value={timer} placeholder="Enter time" onChange={(event) => setTimer(event.target.value)} />
-      </form>
+      </form> */}
     </div>
   )
 }
