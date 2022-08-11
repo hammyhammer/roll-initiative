@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Layout from '../../components/Layout/Layout'
+import Timer from '../../components/Timer/Timer'
 // import PostCharacter from '../PostCharacter/PostCharacter'
 export default function Home(props) {
   // console.log(props.currentUser)
@@ -12,6 +13,7 @@ export default function Home(props) {
     <div>
       <Layout>
         <h3>Main Page</h3>
+        <Timer />
         {
           characters.map(character => (
             <div key={character.id}>
