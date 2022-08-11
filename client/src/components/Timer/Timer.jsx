@@ -1,13 +1,13 @@
 import { useState, useEffect } from 'react'
 
-export default function Timer() {
-  const [timer, setTimer] = useState(10)
+export default function Timer({ max }) {
+  const [timer, setTimer] = useState(max)
 
   useEffect(() => {
     if (timer > 0) {
       setTimeout(() => setTimer(timer - 1), 1000)
     }
-  }, [])
+  }, [timer])
 
   // const handleSubmit = (event) => {
   //   event.preventDefault()

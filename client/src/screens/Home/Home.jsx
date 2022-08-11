@@ -7,13 +7,13 @@ export default function Home(props) {
   // console.log(props.currentUser)
   // console.log(props.characters)
   let characters = props.characters
-  console.log(characters)
+  // console.log(characters)
 
   return (
     <div>
       <Layout>
         <h3>Main Page</h3>
-        <Timer />
+        <Timer max={60} />
         {
           characters.map(character => (
             <div key={character.id}>
