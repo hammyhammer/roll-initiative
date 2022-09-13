@@ -14,13 +14,15 @@
 .inputs {
   display: flex;
   flex-direction: column;
+  margin: 10px 30px
 }
 
 .input_box {
+  margin: 10px 0px;
   width: 300px;
 }
 
-.inputs {
-
-  width: 10%
+.login_button {
+  text-align: center;
+  width: 100px;
 }

@@ -37,7 +37,7 @@ export default function Login(props) {
         <form className={logincss.inputs} onSubmit={handleSubmit}>
           <input className={logincss.input_box} type="email" value={email} placeholder='email' onChange={(event) => setEmail(event.target.value)} />
           <input className={logincss.input_box} type="password" value={password} placeholder='password' onChange={(event) => setPassword(event.target.value)} />
-          <button>Login</button>
+          <button className={logincss.login_button}>Login</button>
 
         </form>
 
